@@ -52,7 +52,7 @@ b={}
 console.log(a,b)
 
 //note
-//assigning an oblect to a const keyword does allow to change individual value but the total object
+//assigning an object with a const keyword does allow to change individual value but the total object
 
 const user = {
     name : 'Babu',
