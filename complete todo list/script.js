@@ -30,10 +30,15 @@
             const span = document.createElement("span")
             span.textContent = newTask.text ;
 
+            const btnDiv = document.createElement("div")
+            btnDiv.className="btn-div"
+
             const deleteBtn = document.createElement("button")
+            deleteBtn.className="delete-btn"
             deleteBtn.textContent = "DELETE"
 
             const completedBtn = document.createElement("button")
+            completedBtn.className="completed-btn"
             completedBtn.textContent = "COMPLETED"
 
             deleteBtn.addEventListener('click', () =>{
@@ -45,9 +50,11 @@
             })
 
 
+            btnDiv.append(deleteBtn)
+            btnDiv.append(completedBtn)
+
             li.append(span)
-            li.append(deleteBtn)
-            li.append(completedBtn)
+            li.append(btnDiv)
             todoList.append(li)
 
             task.value = "";
@@ -79,7 +86,7 @@
         li.textContent = completedItem.text
 
         completedTask.append(li)
-        console.log(list)
+        //console.log(list)
     }
 
     function deleteTask(id) {
@@ -92,5 +99,5 @@
         let item = document.getElementById("item-" + id);
         if(item) item.remove();
 
-        console.log(list)
+        //console.log(list)
     }
