@@ -5,6 +5,12 @@
     let todoList = document.getElementById("todoList");
     let completedTask = document.getElementById("doneList");
 
+    task.addEventListener("keydown", (event) => {
+    if(event.key === "Enter"){
+        addBtn.click();
+    }
+});
+
     addBtn.addEventListener('click', () => {
         if(task.value.trim() !== ''){
 
@@ -83,7 +89,10 @@
 
         //completedTask.innerHTML += "<li>" + list[id] + "</li>";
         const li = document.createElement("li")
-        li.textContent = completedItem.text
+        const span = document.createElement("span")
+        span.textContent = completedItem.text
+        span.className = "completed-text"
+        li.append(span)
 
         completedTask.append(li)
         //console.log(list)

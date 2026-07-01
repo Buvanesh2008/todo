@@ -1,9 +1,10 @@
 .container{
     max-width: 700px;
     margin: 50px auto;
-    padding: 30px;
+    padding: 40px;
     background-color: white;
     border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
 }
 
 body{
@@ -11,6 +12,10 @@ body{
     background-color: #f5f7fa;
     color: #1f2937;
 
+}
+
+h1{
+    letter-spacing: 1px;
 }
 
 .input-section{
@@ -93,6 +98,7 @@ ul{
 }
 
 #doneList{
+    margin-top: 20px;
     list-style-type: "✅";
 }
 
@@ -100,6 +106,56 @@ li{
     display: flex;
     flex: 1;
     justify-content: space-between;
-    
 
+    padding: 14px 18px;
+    margin-bottom: 10px;
+
+    background-color: #f8fafc;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    cursor: default;
+
+}
+
+li:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: all 0.25s ease;
+}
+
+.btn-div{
+    display: flex;
+    gap: 10px;
+}
+
+.completed-text{
+    color: #9ca3af;
+    text-decoration: line-through;
+    font-style: italic;
+}
+
+li span{
+    flex: 1;
+    font-size: 17px;
+}
+
+button{
+    transition: all 0.25s ease;
+}
+
+button:hover{
+    transform: translateY(-2px);
+}
+
+button:active{
+    transform: scale(0.96);
+}
+
+#input-box::placeholder{
+    color: #9ca3af;
+}
+
+#input-box:focus{
+    outline: none;
+    box-shadow: 0 0 0 4px rgba(37,99,235,0.2);
 }
